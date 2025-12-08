@@ -90,6 +90,10 @@
                 <h2 class="section-title">Nuestra Carta</h2>
                 <p class="section-subtitle">Deliciosos platos preparados con ingredientes frescos</p>
                 <div class="section-divider"></div>
+                <button class="promo-btn" id="promo-cumple-btn" style="margin: 16px 0;">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Promoción cumpleañero</span>
+                </button>
             </div>
             
             <div class="menu-filters">
@@ -391,6 +395,35 @@
     <script src="./scripts/products.js"></script>
     <script src="./scripts/cart.js"></script>
     <script src="./scripts/main.js"></script>
+    <!-- Modal Promoción Cumpleañero -->
+    <div id="promo-cumple-modal" class="promo-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:999;align-items:center;justify-content:center;">
+        <div class="promo-modal-content" style="background:#fff;padding:32px 24px;border-radius:12px;max-width:350px;text-align:center;position:relative;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+            <button class="promo-modal-close" id="close-promo-modal" style="position:absolute;top:12px;right:12px;font-size:1.5rem;background:none;border:none;cursor:pointer;">&times;</button>
+            <div class="promo-badge" style="font-weight:700;font-size:1.2rem;color:#e67e22;margin-bottom:8px;">Promoción Cumpleañero</div>
+            <h2 class="promo-title" style="font-size:1.1rem;margin-bottom:12px;">¡Celebra tu cumpleaños con nosotros!</h2>
+            <p class="promo-description" style="margin-bottom:12px;">Si vienes el día de tu cumpleaños y consumes solo platos de la carta:</p>
+            <ul class="promo-list" style="text-align:left;margin-bottom:12px;">
+                <li>Por 8 personas: <b>una torre chelera gratis</b></li>
+                <li>Por 2 personas: <b>una cerveza gratis</b></li>
+            </ul>
+            <p class="promo-note" style="font-size:0.95rem;color:#555;">*Válido solo para el cumpleañero y acompañantes. Aplica solo en platos de la carta.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var promoBtn = document.getElementById('promo-cumple-btn');
+            var promoModal = document.getElementById('promo-cumple-modal');
+            var closePromo = document.getElementById('close-promo-modal');
+            if (promoBtn && promoModal && closePromo) {
+                promoBtn.onclick = function() {
+                    promoModal.style.display = 'flex';
+                };
+                closePromo.onclick = function() {
+                    promoModal.style.display = 'none';
+                };
+            }
+        });
+    </script>
 
     <!-- Modal Oferta Mensual Mejorado -->
     <div id="offer-modal" class="offer-modal-overlay">
@@ -399,8 +432,8 @@
             <div class="offer-badge">Oferta Especial</div>
             <img src="./images/menu/oferta.jpg" alt="Oferta del mes" class="offer-img" />
             <h2 class="offer-title">¡Oferta del Mes!</h2>
-            <p class="offer-description">Al primer pedido una <b>jarra de chicha gratis</b>.</p>
-            <button class="btn btn-primary" id="close-offer-btn">¡Genial, quiero pedir!</button>
+            <p class="offer-description">Por la compra de un <b>dúo</b> o <b>trío</b> te llevas <b>gratis una Pepsi de 330ml</b>.</p>
+            <button class="btn btn-primary" id="close-offer-btn">¡Quiero mi Pepsi gratis!</button>
         </div>
     </div>
     <script>
