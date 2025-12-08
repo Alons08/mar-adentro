@@ -7,6 +7,7 @@
     <title>Mar Adentro</title>
     <link rel="stylesheet" href="./styles/main.css">
     <style>
+        /* Estilos para botón de promoción */
         .promo-btn {
             display: inline-flex;
             align-items: center;
@@ -30,10 +31,196 @@
             background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
             transform: translateY(-2px) scale(1.04);
         }
+        
+        /* Estilos para modales de promoción */
+        .promo-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .promo-modal-content {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 12px;
+            max-width: 350px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            animation: slideUp 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+        
+        .promo-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s;
+        }
+        
+        .promo-modal-close:hover {
+            color: #333;
+        }
+        
+        .promo-badge {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #e67e22;
+            margin-bottom: 8px;
+        }
+        
+        .promo-title {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .promo-description {
+            margin-bottom: 12px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .promo-list {
+            text-align: left;
+            margin: 16px 0;
+            padding-left: 20px;
+        }
+        
+        .promo-list li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+        
+        .promo-note {
+            font-size: 0.95rem;
+            color: #777;
+            font-style: italic;
+            margin-top: 16px;
+        }
+        
+        /* Estilos para modal de oferta */
+        .offer-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .offer-modal-content {
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+        
+        .offer-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            line-height: 1;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        
+        .offer-modal-close:hover {
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .offer-badge {
+            background: linear-gradient(90deg, #ff5722, #ff9800);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .offer-img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+        
+        .offer-title {
+            font-size: 1.4rem;
+            margin: 12px 0;
+            color: #333;
+        }
+        
+        .offer-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
         @media (max-width: 600px) {
             .promo-btn {
                 font-size: 0.95rem;
                 padding: 7px 14px;
+            }
+            
+            .promo-modal-content,
+            .offer-modal-content {
+                width: 95%;
+                padding: 20px 16px;
+                margin: 10px;
             }
         }
     </style>
@@ -423,99 +610,25 @@
         </div>
     </div>
 
+    <!-- Scripts existentes -->
     <script src="./scripts/products.js"></script>
     <script src="./scripts/cart.js"></script>
     <script src="./scripts/main.js"></script>
+
     <!-- Modal Promoción Cumpleañero -->
-    <div id="promo-cumple-modal" class="promo-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:999;align-items:center;justify-content:center;">
-        <div class="promo-modal-content" style="background:#fff;padding:32px 24px;border-radius:12px;max-width:350px;text-align:center;position:relative;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
-            <button class="promo-modal-close" id="close-promo-modal" style="position:absolute;top:12px;right:12px;font-size:1.5rem;background:none;border:none;cursor:pointer;">&times;</button>
-            <div class="promo-badge" style="font-weight:700;font-size:1.2rem;color:#e67e22;margin-bottom:8px;">Promoción Cumpleañero</div>
-            <h2 class="promo-title" style="font-size:1.1rem;margin-bottom:12px;">¡Celebra tu cumpleaños con nosotros!</h2>
-            <p class="promo-description" style="margin-bottom:12px;">Si vienes el día de tu cumpleaños y consumes solo platos de la carta:</p>
-            <ul class="promo-list" style="text-align:left;margin-bottom:12px;">
-                <li>Por 8 personas: <b>una torre chelera gratis</b></li>
-                <li>Por 2 personas: <b>una cerveza gratis</b></li>
+    <div id="promo-cumple-modal" class="promo-modal-overlay">
+        <div class="promo-modal-content">
+            <button class="promo-modal-close" id="close-promo-modal">&times;</button>
+            <div class="promo-badge">Promoción Cumpleañero</div>
+            <h2 class="promo-title">¡Celebra tu cumpleaños con nosotros!</h2>
+            <p class="promo-description">Si vienes el día de tu cumpleaños y consumes solo platos de la carta:</p>
+            <ul class="promo-list">
+                <li>Por <b>8 personas</b>: <b>una torre chelera gratis</b></li>
+                <li>Por <b>2 personas</b>: <b>una cerveza gratis</b></li>
             </ul>
-            <p class="promo-note" style="font-size:0.95rem;color:#555;">*Válido solo para el cumpleañero y acompañantes. Aplica solo en platos de la carta.</p>
+            <p class="promo-note">*Válido solo para el cumpleañero y acompañantes. Aplica solo en platos de la carta.</p>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var promoBtn = document.getElementById('promo-cumple-btn');
-            var promoModal = document.getElementById('promo-cumple-modal');
-            var closePromo = document.getElementById('close-promo-modal');
-            // Confetti setup
-            var confettiCanvas = null;
-            function launchConfetti() {
-                if (confettiCanvas) confettiCanvas.remove();
-                confettiCanvas = document.createElement('canvas');
-                confettiCanvas.id = 'confetti-canvas';
-                confettiCanvas.style.position = 'fixed';
-                confettiCanvas.style.top = '0';
-                confettiCanvas.style.left = '0';
-                confettiCanvas.style.width = '100vw';
-                confettiCanvas.style.height = '100vh';
-                confettiCanvas.style.pointerEvents = 'none';
-                confettiCanvas.style.zIndex = '1001';
-                document.body.appendChild(confettiCanvas);
-                var ctx = confettiCanvas.getContext('2d');
-                var W = window.innerWidth;
-                var H = window.innerHeight;
-                confettiCanvas.width = W;
-                confettiCanvas.height = H;
-                var particles = [];
-                var colors = ['#ff9800','#ff5722','#4caf50','#2196f3','#e91e63','#fff200'];
-                for(var i=0;i<80;i++){
-                    particles.push({
-                        x: Math.random()*W,
-                        y: Math.random()*-H,
-                        r: Math.random()*7+4,
-                        d: Math.random()*W,
-                        color: colors[Math.floor(Math.random()*colors.length)],
-                        tilt: Math.random()*10-10
-                    });
-                }
-                var angle = 0;
-                function drawConfetti(){
-                    ctx.clearRect(0,0,W,H);
-                    for(var i=0;i<particles.length;i++){
-                        var p = particles[i];
-                        ctx.beginPath();
-                        ctx.arc(p.x,p.y,p.r,0,Math.PI*2,false);
-                        ctx.fillStyle = p.color;
-                        ctx.fill();
-                    }
-                    updateConfetti();
-                }
-                function updateConfetti(){
-                    angle += 0.01;
-                    for(var i=0;i<particles.length;i++){
-                        var p = particles[i];
-                        p.y += (Math.cos(angle+p.d)+1+p.r/2);
-                        p.x += Math.sin(angle);
-                    }
-                }
-                var confettiInterval = setInterval(drawConfetti,16);
-                // Espera a que todos los confetis lleguen al fondo antes de quitar el canvas
-                setTimeout(function(){
-                    clearInterval(confettiInterval);
-                    setTimeout(function(){
-                        if(confettiCanvas) confettiCanvas.remove();
-                    }, 600);
-                },7000);
-            }
-            if (promoBtn && promoModal && closePromo) {
-                promoBtn.onclick = function() {
-                    promoModal.style.display = 'flex';
-                    launchConfetti();
-                };
-                closePromo.onclick = function() {
-                    promoModal.style.display = 'none';
-                };
-            }
-        });
-    </script>
 
     <!-- Modal Oferta Mensual Mejorado -->
     <div id="offer-modal" class="offer-modal-overlay">
@@ -528,24 +641,217 @@
             <button class="btn btn-primary" id="close-offer-btn">¡Quiero mi Pepsi gratis!</button>
         </div>
     </div>
+
+    <!-- Script para Confetti Mejorado -->
     <script>
+        // Confetti Manager mejorado
+        class ConfettiManager {
+            constructor() {
+                this.canvas = null;
+                this.ctx = null;
+                this.particles = [];
+                this.animationId = null;
+                this.isActive = false;
+                this.colors = ['#ff9800', '#ff5722', '#4caf50', '#2196f3', '#e91e63', '#fff200'];
+                this.frameCount = 0;
+                
+                // Manejar redimensionamiento
+                window.addEventListener('resize', () => {
+                    if (this.isActive && this.canvas) {
+                        this.resizeCanvas();
+                    }
+                });
+            }
+
+            launch() {
+                // Limpiar confetti anterior si existe
+                this.stop();
+                
+                // Crear canvas
+                this.canvas = document.createElement('canvas');
+                this.canvas.id = 'confetti-canvas';
+                this.canvas.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    pointer-events: none;
+                    z-index: 1001;
+                `;
+                document.body.appendChild(this.canvas);
+                
+                this.ctx = this.canvas.getContext('2d');
+                this.resizeCanvas();
+                this.createParticles();
+                this.isActive = true;
+                this.frameCount = 0;
+                this.animate();
+                
+                // Auto-limpiar después de 7 segundos
+                setTimeout(() => this.stop(), 7000);
+            }
+
+            resizeCanvas() {
+                if (!this.canvas) return;
+                
+                const dpr = window.devicePixelRatio || 1;
+                const rect = this.canvas.getBoundingClientRect();
+                
+                this.canvas.width = rect.width * dpr;
+                this.canvas.height = rect.height * dpr;
+                
+                this.ctx.scale(dpr, dpr);
+            }
+
+            createParticles() {
+                this.particles = [];
+                const particleCount = Math.min(100, Math.floor(window.innerWidth / 10));
+                
+                for (let i = 0; i < particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * -window.innerHeight,
+                        r: Math.random() * 6 + 3,
+                        d: Math.random() * particleCount + 10,
+                        color: this.colors[Math.floor(Math.random() * this.colors.length)],
+                        tilt: Math.random() * 10 - 5,
+                        tiltAngle: 0,
+                        tiltAngleIncrement: Math.random() * 0.1 + 0.01,
+                        wind: Math.random() * 0.5 - 0.25,
+                        gravity: 0.05 + Math.random() * 0.05,
+                        opacity: 0.8 + Math.random() * 0.2,
+                        shape: Math.random() > 0.3 ? 'circle' : 'rectangle'
+                    });
+                }
+            }
+
+            drawParticle(particle) {
+                this.ctx.save();
+                this.ctx.translate(particle.x, particle.y);
+                this.ctx.rotate(particle.tiltAngle);
+                this.ctx.globalAlpha = particle.opacity;
+                
+                if (particle.shape === 'circle') {
+                    // Círculo
+                    this.ctx.beginPath();
+                    this.ctx.arc(0, 0, particle.r, 0, Math.PI * 2);
+                    this.ctx.fillStyle = particle.color;
+                    this.ctx.fill();
+                } else {
+                    // Rectángulo (confeti)
+                    this.ctx.fillStyle = particle.color;
+                    this.ctx.fillRect(-particle.r, -particle.r/3, particle.r*2, particle.r/1.5);
+                }
+                
+                this.ctx.restore();
+            }
+
+            updateParticle(particle) {
+                // Física mejorada
+                particle.tiltAngle += particle.tiltAngleIncrement;
+                particle.y += particle.d * particle.gravity;
+                particle.x += Math.sin(particle.d * 0.1) * 0.5 + particle.wind;
+                
+                // Reaparecer arriba si sale por abajo
+                if (particle.y > window.innerHeight + particle.r) {
+                    particle.y = -particle.r;
+                    particle.x = Math.random() * window.innerWidth;
+                }
+                
+                // Desvanecer gradualmente al final
+                if (this.frameCount > 140) {
+                    const fadeStart = 140;
+                    const fadeDuration = 100;
+                    const progress = Math.min(1, (this.frameCount - fadeStart) / fadeDuration);
+                    particle.opacity = 0.8 * (1 - progress);
+                }
+            }
+
+            animate() {
+                if (!this.isActive || !this.ctx) return;
+                
+                this.frameCount++;
+                
+                // Limpiar canvas
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Dibujar y actualizar partículas
+                this.particles.forEach(particle => {
+                    this.updateParticle(particle);
+                    this.drawParticle(particle);
+                });
+                
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            stop() {
+                this.isActive = false;
+                this.frameCount = 0;
+                
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                    this.animationId = null;
+                }
+                
+                if (this.canvas && this.canvas.parentNode) {
+                    this.canvas.parentNode.removeChild(this.canvas);
+                }
+                
+                this.particles = [];
+                this.canvas = null;
+                this.ctx = null;
+            }
+        }
+
+        // Inicialización cuando el DOM esté listo
         document.addEventListener('DOMContentLoaded', function() {
-            var offerModal = document.getElementById('offer-modal');
-            var closeBtn = document.getElementById('close-offer-modal');
-            var closeBtn2 = document.getElementById('close-offer-btn');
+            const confettiManager = new ConfettiManager();
             
-            // Mostrar modal después de 1 segundo
-            setTimeout(function() {
-                offerModal.style.display = 'flex';
-            }, 1000);
+            // Modal de promoción cumpleañero
+            const promoBtn = document.getElementById('promo-cumple-btn');
+            const promoModal = document.getElementById('promo-cumple-modal');
+            const closePromo = document.getElementById('close-promo-modal');
             
-            closeBtn.onclick = function() {
-                offerModal.style.display = 'none';
-            };
-                closeBtn2.onclick = function() {
+            if (promoBtn && promoModal && closePromo) {
+                promoBtn.onclick = function() {
+                    promoModal.style.display = 'flex';
+                    confettiManager.launch();
+                };
+                
+                closePromo.onclick = function() {
+                    promoModal.style.display = 'none';
+                    confettiManager.stop();
+                };
+                
+                // Cerrar modal al hacer clic fuera
+                promoModal.onclick = function(e) {
+                    if (e.target === promoModal) {
+                        promoModal.style.display = 'none';
+                        confettiManager.stop();
+                    }
+                };
+            }
+            
+            // Modal de oferta mensual
+            const offerModal = document.getElementById('offer-modal');
+            const closeOfferBtn = document.getElementById('close-offer-modal');
+            const closeOfferBtn2 = document.getElementById('close-offer-btn');
+            
+            if (offerModal && closeOfferBtn && closeOfferBtn2) {
+                // Mostrar modal después de 1 segundo
+                setTimeout(function() {
+                    offerModal.style.display = 'flex';
+                }, 1000);
+                
+                closeOfferBtn.onclick = function() {
+                    offerModal.style.display = 'none';
+                };
+                
+                closeOfferBtn2.onclick = function() {
                     offerModal.style.display = 'none';
                     // Ir a la sección carta
-                    var carta = document.getElementById('menu');
+                    const carta = document.getElementById('menu');
                     if (carta) {
                         carta.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     } else {
@@ -553,6 +859,27 @@
                         window.location.hash = '#menu';
                     }
                 };
+                
+                // Cerrar modal al hacer clic fuera
+                offerModal.onclick = function(e) {
+                    if (e.target === offerModal) {
+                        offerModal.style.display = 'none';
+                    }
+                };
+            }
+            
+            // Cerrar modales con tecla Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (promoModal && promoModal.style.display === 'flex') {
+                        promoModal.style.display = 'none';
+                        confettiManager.stop();
+                    }
+                    if (offerModal && offerModal.style.display === 'flex') {
+                        offerModal.style.display = 'none';
+                    }
+                }
+            });
         });
     </script>
 </body>
