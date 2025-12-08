@@ -13,17 +13,17 @@
     --primary-800: #a50e1a;
     --primary-900: #880b15;
     
-    /* Secondary Colors - Fresh & Natural */
-    --secondary-50: #f0fbff;
-    --secondary-100: #d2f3ff;
-    --secondary-200: #aeefff;
-    --secondary-300: #7be3ff;
-    --secondary-400: #4fd6ff;
-    --secondary-500: #22caff;
-    --secondary-600: #1bb8e6;
-    --secondary-700: #159fc7;
-    --secondary-800: #117fa3;
-    --secondary-900: #0c5c73;
+    /* Secondary Colors - Tonos Azul Oscuro */
+    --secondary-50: #e3eaf6;
+    --secondary-100: #b3c6e2;
+    --secondary-200: #7a9acb;
+    --secondary-300: #4a6eb4;
+    --secondary-400: #234a99;
+    --secondary-500: #16367a;
+    --secondary-600: #112a63;
+    --secondary-700: #0d204b;
+    --secondary-800: #091633;
+    --secondary-900: #082463;
     
     /* Accent Colors - Warm & Inviting */
     --accent-50: #fff3e0;
@@ -49,17 +49,17 @@
     --neutral-800: #212529;
     --neutral-900: #121417;
     
-    /* Semantic Colors */
-    --success-50: #f0fbff;
-    --success-100: #d2f3ff;
-    --success-200: #aeefff;
-    --success-300: #7be3ff;
-    --success-400: #4fd6ff;
-    --success-500: #22caff;
-    --success-600: #1bb8e6;
-    --success-700: #159fc7;
-    --success-800: #117fa3;
-    --success-900: #0c5c73;
+    /* Semantic Colors - Azul Oscuro */
+    --success-50: #e3eaf6;
+    --success-100: #b3c6e2;
+    --success-200: #7a9acb;
+    --success-300: #4a6eb4;
+    --success-400: #234a99;
+    --success-500: #16367a;
+    --success-600: #112a63;
+    --success-700: #0d204b;
+    --success-800: #091633;
+    --success-900: #082463;
     
     --warning-50: #fff8e1;
     --warning-100: #ffecb3;
