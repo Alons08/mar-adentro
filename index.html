@@ -445,9 +445,71 @@
             var promoBtn = document.getElementById('promo-cumple-btn');
             var promoModal = document.getElementById('promo-cumple-modal');
             var closePromo = document.getElementById('close-promo-modal');
+            // Confetti setup
+            var confettiCanvas = null;
+            function launchConfetti() {
+                if (confettiCanvas) confettiCanvas.remove();
+                confettiCanvas = document.createElement('canvas');
+                confettiCanvas.id = 'confetti-canvas';
+                confettiCanvas.style.position = 'fixed';
+                confettiCanvas.style.top = '0';
+                confettiCanvas.style.left = '0';
+                confettiCanvas.style.width = '100vw';
+                confettiCanvas.style.height = '100vh';
+                confettiCanvas.style.pointerEvents = 'none';
+                confettiCanvas.style.zIndex = '1001';
+                document.body.appendChild(confettiCanvas);
+                var ctx = confettiCanvas.getContext('2d');
+                var W = window.innerWidth;
+                var H = window.innerHeight;
+                confettiCanvas.width = W;
+                confettiCanvas.height = H;
+                var particles = [];
+                var colors = ['#ff9800','#ff5722','#4caf50','#2196f3','#e91e63','#fff200'];
+                for(var i=0;i<80;i++){
+                    particles.push({
+                        x: Math.random()*W,
+                        y: Math.random()*-H,
+                        r: Math.random()*7+4,
+                        d: Math.random()*W,
+                        color: colors[Math.floor(Math.random()*colors.length)],
+                        tilt: Math.random()*10-10
+                    });
+                }
+                var angle = 0;
+                function drawConfetti(){
+                    ctx.clearRect(0,0,W,H);
+                    for(var i=0;i<particles.length;i++){
+                        var p = particles[i];
+                        ctx.beginPath();
+                        ctx.arc(p.x,p.y,p.r,0,Math.PI*2,false);
+                        ctx.fillStyle = p.color;
+                        ctx.fill();
+                    }
+                    updateConfetti();
+                }
+                function updateConfetti(){
+                    angle += 0.01;
+                    for(var i=0;i<particles.length;i++){
+                        var p = particles[i];
+                        p.y += (Math.cos(angle+p.d)+3+p.r/2)/2;
+                        p.x += Math.sin(angle);
+                        if(p.y>H){
+                            p.x = Math.random()*W;
+                            p.y = Math.random()*-20;
+                        }
+                    }
+                }
+                var confettiInterval = setInterval(drawConfetti,16);
+                setTimeout(function(){
+                    clearInterval(confettiInterval);
+                    if(confettiCanvas) confettiCanvas.remove();
+                },1800);
+            }
             if (promoBtn && promoModal && closePromo) {
                 promoBtn.onclick = function() {
                     promoModal.style.display = 'flex';
+                    launchConfetti();
                 };
                 closePromo.onclick = function() {
                     promoModal.style.display = 'none';
