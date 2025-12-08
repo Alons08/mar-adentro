@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Mar Adentro</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWERTNSBP6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PWERTNSBP6');
+    </script>
+</head>
+<body>
+    <!-- Navbar importado -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge">¡Bienvenidos!</div>
+            <h1 class="hero-title">MAR ADENTRO</h1>
+            <p class="hero-subtitle">Un lugar para compartir y disfrutar diario</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Ver nuestra carta</span>
+                    <i class="fas fa-utensils"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Contáctanos</span>
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Desliza</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Historia</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Desde 2025, en Mar Adentro nos encanta reunir amigos y familias para disfrutar juntos. Aquí cada día se vive con alegría, buena comida y recuerdos que se quedan en el corazón.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Pasión</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Familia</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <span>Calidad</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>Sabor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="./images/restaurant-exterior.jpg" alt="Exterior del restaurante" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Carta</h2>
+                <p class="section-subtitle">Deliciosos platos preparados con ingredientes frescos</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="ceviches">
+                    <i class="fas fa-fish"></i>
+                    <span>Ceviches</span>
+                </button>
+                <button class="filter-btn" data-category="chicharrones">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>Chicharrones</span>
+                </button>
+                <button class="filter-btn" data-category="arroces-chaufas">
+                    <i class="fas fa-bowl-rice"></i>
+                    <span>Arroces y Chaufas</span>
+                </button>
+                <button class="filter-btn" data-category="sopas-calientes">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Sopas y Platos Calientes</span>
+                </button>
+                <button class="filter-btn" data-category="pescados-plancha-fritos">
+                    <i class="fas fa-fish"></i>
+                    <span>Pescados a la Plancha y Fritos</span>
+                </button>
+                <button class="filter-btn" data-category="pastas">
+                    <i class="fas fa-pizza-slice"></i>
+                    <span>Pastas</span>
+                </button>
+                <button class="filter-btn" data-category="combos">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Combos</span>
+                </button>
+                <button class="filter-btn" data-category="causas">
+                    <i class="fas fa-lemon"></i>
+                    <span>Causas</span>
+                </button>
+                <button class="filter-btn" data-category="bebidas">
+                    <i class="fas fa-glass-whiskey"></i>
+                    <span>Bebidas</span>
+                </button>
+            </div>
+            
+            <div class="menu-items" id="menu-items">
+                <!-- Los productos se cargarán dinámicamente desde JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Comentarios -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonios</h2>
+                <p class="section-subtitle">Lo que nuestros clientes dicen</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">La comida es deliciosa y la atención excelente. Volveré pronto.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Ana R.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">El ambiente es muy acogedor, ideal para compartir en familia.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Luis M.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">Me encantó el ceviche y la rapidez del servicio.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Carla S.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">Excelente variedad de platos y precios accesibles. Recomendado.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Pedro T.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">El local es limpio y el personal muy amable. Volveré con mi familia.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Rosa G.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">La jarra de chicha gratis fue el mejor detalle. Gracias.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Javier P.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos aquí para atenderte</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Dirección</h4>
+                            <p>Av. 12 Noviembre 1309 - Florencia De Mora</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+51920035270">920 035 270</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/51920035270?text=Hola%2C%20quiero%20más%20información..." target="_blank">Enviar mensaje</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Horario</h4>
+                                <p>Lun, Mar, Jue, Vie: 7:00 PM - 12:00 AM</p>
+                                <p>Sáb, Dom: 9:00 AM - 3:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.5493821828859!2d-79.01977838179201!3d-8.081327298807768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d105ee65145%3A0x32ec4c1f96661ab!2sLa%20esquina%20del%20combinado!5e0!3m2!1ses-419!2spe!4v1764369414299!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer importado -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Floating Cart Button -->
+    <button type="button" class="cart-float" id="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-container" id="cart-modal">
+        <!-- Paso 1: Vista del Carrito -->
+        <div class="cart-step" id="cart-step-1">
+            <div class="cart-header">
+                <h3>Tu Pedido</h3>
+                <button class="close-cart" id="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Los items del carrito se agregarán aquí dinámicamente -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">S/0.00</span>
+                </div>
+                <button class="btn btn-primary" id="checkout">Realizar Pedido</button>
+            </div>
+        </div>
+
+        <!-- Paso 2: Formulario de Información -->
+        <div class="cart-step" id="cart-step-2">
+            <div class="cart-header">
+                <button class="back-to-cart" id="back-to-cart">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h3>Información del Pedido</h3>
+                <button class="close-cart" id="close-cart-2">&times;</button>
+            </div>
+            <!-- Dentro del cart-step-2, modifica el formulario así: -->
+            <div class="customer-info">
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre *</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Teléfono *</label>
+                        <input type="tel" id="customer-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-payment">Tipo de Pago *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="delivery-payment" value="Efectivo" required> Efectivo</label>
+                            <label><input type="radio" name="delivery-payment" value="Yape"> Yape</label>
+                            <label><input type="radio" name="delivery-payment" value="Plin"> Plin</label>
+                            <label><input type="radio" name="delivery-payment" value="Otro"> Tarjeta</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-type">Tipo de Entrega *</label>
+                        <select id="delivery-type" required>
+                            <option value="">Seleccionar</option>
+                            <option value="pickup">Recoger en el Local</option>
+                            <option value="delivery">Delivery</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Campos para Recoger en Local -->
+                    <div class="delivery-fields" id="pickup-fields">
+                        <div class="form-group">
+                            <label for="pickup-time">Tiempo estimado para recoger *</label>
+                            <select id="pickup-time" required>
+                                <option value="">Seleccionar</option>
+                                <option value="20-25">20 - 25 minutos</option>
+                                <option value="25-30">25 - 30 minutos</option>
+                                <option value="30-plus">30 minutos a más</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-notes">Observaciones</label>
+                            <textarea id="pickup-notes" rows="2"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Campos para Delivery -->
+                    <div class="delivery-fields" id="delivery-fields">
+                        <div class="form-group">
+                            <label for="delivery-address">Dirección de Entrega *</label>
+                            <input type="text" id="delivery-address">
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-notes">Observaciones</label>
+                            <textarea id="delivery-notes" rows="2"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-outline" id="cancel-order">Cancelar</button>
+                <button class="btn btn-primary" id="submit-order">Enviar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/main.js"></script>
+
+    <!-- Modal Oferta Mensual Mejorado -->
+    <div id="offer-modal" class="offer-modal-overlay">
+        <div class="offer-modal-content">
+            <button class="offer-modal-close" id="close-offer-modal">&times;</button>
+            <div class="offer-badge">Oferta Especial</div>
+            <img src="./images/menu/oferta.jpg" alt="Oferta del mes" class="offer-img" />
+            <h2 class="offer-title">¡Oferta del Mes!</h2>
+            <p class="offer-description">Al primer pedido una <b>jarra de chicha gratis</b>.</p>
+            <button class="btn btn-primary" id="close-offer-btn">¡Genial, quiero pedir!</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var offerModal = document.getElementById('offer-modal');
+            var closeBtn = document.getElementById('close-offer-modal');
+            var closeBtn2 = document.getElementById('close-offer-btn');
+            
+            // Mostrar modal después de 1 segundo
+            setTimeout(function() {
+                offerModal.style.display = 'flex';
+            }, 1000);
+            
+            closeBtn.onclick = function() {
+                offerModal.style.display = 'none';
+            };
+                closeBtn2.onclick = function() {
+                    offerModal.style.display = 'none';
+                    // Ir a la sección carta
+                    var carta = document.getElementById('menu');
+                    if (carta) {
+                        carta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        // Si no existe el id, redirige por hash
+                        window.location.hash = '#menu';
+                    }
+                };
+        });
+    </script>
+</body>
+</html>
