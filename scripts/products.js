@@ -23,7 +23,7 @@ const products = [
     { id: 12, name: "Chupe de Pescado", category: "sopas-calientes", price: 30, description: "Chupe tradicional de pescado.", image: "./images/menu/chupe-pescado.jpg", available: true },
     { id: 13, name: "Sudado de Cabrilla", category: "sopas-calientes", price: 33, description: "Sudado de cabrilla con jugo.", image: "./images/menu/sudado-cabrilla.jpg", available: true },
     { id: 14, name: "Parihuela de Tramboyo", category: "sopas-calientes", price: 38, description: "Parihuela de tramboyo y mariscos.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
-    { id: 55, name: "Chilcano de pescado", category: "sopas-calientes", price: 10, description: "Chilcano de pescado.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
+    { id: 55, name: "Chilcano de pescado", category: "sopas-calientes", price: 10, description: "Chilcano de pescado.", image: "./images/menu/chilcano-pescado.jpg", available: true },
     { id: 5, name: "Chilcano Especial", category: "sopas-calientes", price: 20, description: "Chilcano de pescado y marisco.", image: "./images/menu/chilcano-especial.jpg", available: true },
 
     // Pescados a la Plancha y Fritos
