@@ -79,9 +79,9 @@ const products = [
     { id: 53, name: "Agua Mineral 500 ml", category: "bebidas", price: 3, description: "Agua mineral 500 ml.", image: "./images/menu/agua.jpg", available: true },
     
     // Económico
-    { id: 60, name: "Combo Chaufa", category: "economico", price: 20, description: "Trío: leche de tigre, chaufa de mariscos y chicharrón de pota.", image: "./images/menu/leche-tigre-chaufa-pota.jpg", available: true },
-    { id: 61, name: "Combo Arroz con Mariscos", category: "economico", price: 20, description: "Trío: leche de tigre, arroz con mariscos y chicharrón de pota.", image: "./images/menu/leche-tigre-arroz-pota.jpg", available: true },
-    { id: 62, name: "Combo Causa", category: "economico", price: 20, description: "Trío: leche de tigre, causa rellena y chicharrón de pota.", image: "./images/menu/leche-tigre-causa-pota.jpg", available: true },
+    { id: 60, name: "Combo Chaufa", category: "economico", price: 20, description: "Trío de leche de tigre + chaufa de mariscos + chicharrón de pota.", image: "./images/menu/leche-tigre-chaufa-pota.jpg", available: true },
+    { id: 61, name: "Combo Arroz con Mariscos", category: "economico", price: 20, description: "Trío de leche de tigre + arroz con mariscos + chicharrón de pota.", image: "./images/menu/leche-tigre-arroz-pota.jpg", available: true },
+    { id: 62, name: "Combo Causa", category: "economico", price: 20, description: "Trío de leche de tigre + causa rellena + chicharrón de pota.", image: "./images/menu/leche-tigre-causa-pota.jpg", available: true },
     { id: 63, name: "Ceviche de Pescado + Chicharrón de Pota", category: "economico", price: 15, description: "Ceviche de pescado acompañado de chicharrón de pota.", image: "./images/menu/ceviche-pescado-pota.jpg", available: true },
     { id: 64, name: "Leche de Tigre", category: "economico", price: 10, description: "Leche de tigre porción económica.", image: "./images/menu/leche-tigre.jpg", available: true },
     { id: 65, name: "Chicharrón de Pota ", category: "economico", price: 10, description: "Chicharrón de pota porción económica.", image: "./images/menu/chicharron-pota.jpg", available: true },
