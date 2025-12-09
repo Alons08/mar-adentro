@@ -11,8 +11,8 @@ const products = [
     { id: 6, name: "Chicharrón de Pescado", category: "chicharrones", price: 30, description: "Chicharrón crocante de pescado.", image: "./images/menu/chicharron-pescado.jpg", available: true },
     { id: 7, name: "Chicharrón con Pota", category: "chicharrones", price: 20, description: "Chicharrón de pota fresco.", image: "./images/menu/chicharron-pota.jpg", available: true },
     { id: 8, name: "Chicharrón Mixto", category: "chicharrones", price: 35, description: "Chicharrón de pescado y pota.", image: "./images/menu/chicharron-mixto.jpg", available: true },
-    { id: 26, name: "Jalea Mixta", category: "pescados-plancha-fritos", price: 35, description: "Jalea mixta de mariscos.", image: "./images/menu/jalea-mixta.jpg", available: true },
-    { id: 27, name: "Jalea Real", category: "pescados-plancha-fritos", price: 40, description: "Jalea real de mariscos.", image: "./images/menu/jalea-real.jpg", available: true },
+    { id: 26, name: "Jalea Mixta", category: "chicharrones", price: 35, description: "Jalea mixta de mariscos.", image: "./images/menu/jalea-mixta.jpg", available: true },
+    { id: 27, name: "Jalea Real", category: "chicharrones", price: 40, description: "Jalea real de mariscos.", image: "./images/menu/jalea-real.jpg", available: true },
 
     // Arroces y Chaufas
     { id: 9, name: "Arroz con Mariscos", category: "arroces-chaufas", price: 32, description: "Arroz con mariscos frescos.", image: "./images/menu/arroz-mariscos.jpg", available: true },
@@ -24,7 +24,7 @@ const products = [
     { id: 13, name: "Sudado de Cabrilla", category: "sopas-calientes", price: 33, description: "Sudado de cabrilla con jugo.", image: "./images/menu/sudado-cabrilla.jpg", available: true },
     { id: 14, name: "Parihuela de Tramboyo", category: "sopas-calientes", price: 38, description: "Parihuela de tramboyo y mariscos.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
     { id: 55, name: "Chilcano de pescado", category: "sopas-calientes", price: 10, description: "Chilcano de pescado.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
-    { id: 5, name: "Chilcano Especial", category: "ceviches", price: 20, description: "Chilcano de pescado y marisco.", image: "./images/menu/chilcano-especial.jpg", available: true },
+    { id: 5, name: "Chilcano Especial", category: "sopas-calientes", price: 20, description: "Chilcano de pescado y marisco.", image: "./images/menu/chilcano-especial.jpg", available: true },
 
     // Pescados a la Plancha y Fritos
     { id: 15, name: "Filete de Pescado a la Plancha", category: "pescados-plancha-fritos", price: 30, description: "Filete de pescado a la plancha.", image: "./images/menu/filete-plancha.jpg", available: true },
