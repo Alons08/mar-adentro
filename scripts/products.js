@@ -6,12 +6,13 @@ const products = [
     { id: 2, name: "Ceviche de Pescado", category: "ceviches", price: 30, description: "Ceviche clásico de pescado fresco.", image: "./images/menu/ceviche-pescado.jpg", available: true },
     { id: 3, name: "Ceviche Mixto", category: "ceviches", price: 35, description: "Ceviche mixto de pescado y mariscos.", image: "./images/menu/ceviche-mixto.jpg", available: true },
     { id: 4, name: "Ceviche Carretillero", category: "ceviches", price: 25, description: "Ceviche de pescado + chicharrón + pota.", image: "./images/menu/ceviche-carretillero.jpg", available: true },
-    { id: 5, name: "Chilcano Especial", category: "ceviches", price: 20, description: "Chilcano de pescado y marisco.", image: "./images/menu/chilcano-especial.jpg", available: true },
 
     // Chicharrones
     { id: 6, name: "Chicharrón de Pescado", category: "chicharrones", price: 30, description: "Chicharrón crocante de pescado.", image: "./images/menu/chicharron-pescado.jpg", available: true },
     { id: 7, name: "Chicharrón con Pota", category: "chicharrones", price: 20, description: "Chicharrón de pota fresco.", image: "./images/menu/chicharron-pota.jpg", available: true },
     { id: 8, name: "Chicharrón Mixto", category: "chicharrones", price: 35, description: "Chicharrón de pescado y pota.", image: "./images/menu/chicharron-mixto.jpg", available: true },
+    { id: 26, name: "Jalea Mixta", category: "pescados-plancha-fritos", price: 35, description: "Jalea mixta de mariscos.", image: "./images/menu/jalea-mixta.jpg", available: true },
+    { id: 27, name: "Jalea Real", category: "pescados-plancha-fritos", price: 40, description: "Jalea real de mariscos.", image: "./images/menu/jalea-real.jpg", available: true },
 
     // Arroces y Chaufas
     { id: 9, name: "Arroz con Mariscos", category: "arroces-chaufas", price: 32, description: "Arroz con mariscos frescos.", image: "./images/menu/arroz-mariscos.jpg", available: true },
@@ -22,6 +23,8 @@ const products = [
     { id: 12, name: "Chupe de Pescado", category: "sopas-calientes", price: 30, description: "Chupe tradicional de pescado.", image: "./images/menu/chupe-pescado.jpg", available: true },
     { id: 13, name: "Sudado de Cabrilla", category: "sopas-calientes", price: 33, description: "Sudado de cabrilla con jugo.", image: "./images/menu/sudado-cabrilla.jpg", available: true },
     { id: 14, name: "Parihuela de Tramboyo", category: "sopas-calientes", price: 38, description: "Parihuela de tramboyo y mariscos.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
+    { id: 55, name: "Chilcano de pescado", category: "sopas-calientes", price: 10, description: "Chilcano de pescado.", image: "./images/menu/parihuela-tramboyo.jpg", available: true },
+    { id: 5, name: "Chilcano Especial", category: "ceviches", price: 20, description: "Chilcano de pescado y marisco.", image: "./images/menu/chilcano-especial.jpg", available: true },
 
     // Pescados a la Plancha y Fritos
     { id: 15, name: "Filete de Pescado a la Plancha", category: "pescados-plancha-fritos", price: 30, description: "Filete de pescado a la plancha.", image: "./images/menu/filete-plancha.jpg", available: true },
@@ -35,21 +38,23 @@ const products = [
     { id: 23, name: "Trucha Dorada", category: "pescados-plancha-fritos", price: 25, description: "Trucha dorada frita.", image: "./images/menu/trucha-dorada.jpg", available: true },
     { id: 24, name: "Trucha a la Parrilla", category: "pescados-plancha-fritos", price: 25, description: "Trucha a la parrilla.", image: "./images/menu/trucha-parrilla.jpg", available: true },
     { id: 25, name: "Chita al Ajo", category: "pescados-plancha-fritos", price: 60, description: "Chita al ajo especial.", image: "./images/menu/chita-ajo.jpg", available: true },
-    { id: 26, name: "Jalea Mixta", category: "pescados-plancha-fritos", price: 35, description: "Jalea mixta de mariscos.", image: "./images/menu/jalea-mixta.jpg", available: true },
-    { id: 27, name: "Jalea Real", category: "pescados-plancha-fritos", price: 40, description: "Jalea real de mariscos.", image: "./images/menu/jalea-real.jpg", available: true },
 
     // Pastas
     { id: 28, name: "Fetuccini a lo Alfredo de Marisco", category: "pastas", price: 40, description: "Fetuccini con salsa Alfredo y mariscos.", image: "./images/menu/fetuccini-mariscos.jpg", available: true },
+    
+    // Duos marinos
+    { id: 29, name: "Ceviche de Pescado + Chicharrón de Pescado", category: "duos-marinos", price: 33, description: "Ceviche de pescado + chicharrón de pescado.", image: "./images/menu/duo-marino.jpg", available: true },
+    { id: 30, name: "Ceviche de Pescado + Chicharrón Mixto", category: "duos-marinos", price: 35, description: "Ceviche de pescado + chicharrón mixto.", image: "./images/menu/duo-marino-mixto.jpg", available: true },
+    { id: 31, name: "Ceviche de Pescado + Chaufa de Mariscos", category: "duos-marinos", price: 35, description: "Ceviche de pescado + chaufa de mariscos.", image: "./images/menu/duo-marino-chaufa.jpg", available: true },
+    { id: 32, name: "Ceviche de Pescado + Arroz con Mariscos", category: "duos-marinos", price: 35, description: "Ceviche de pescado + arroz con mariscos.", image: "./images/menu/duo-marino-arroz.jpg", available: true },
+    { id: 33, name: "Chicharrón de Pescado + Arroz con Mariscos", category: "duos-marinos", price: 36, description: "Chicharrón de pescado + arroz con mariscos.", image: "./images/menu/chicharron-arroz.jpg", available: true },
 
-    // Combos
-    { id: 29, name: "Ceviche de Pescado + Chicharrón de Pescado", category: "combos", price: 33, description: "Ceviche de pescado + chicharrón de pescado.", image: "./images/menu/duo-marino.jpg", available: true },
-    { id: 30, name: "Ceviche de Pescado + Chicharrón Mixto", category: "combos", price: 35, description: "Ceviche de pescado + chicharrón mixto.", image: "./images/menu/duo-marino-mixto.jpg", available: true },
-    { id: 31, name: "Ceviche de Pescado + Chaufa de Mariscos", category: "combos", price: 35, description: "Ceviche de pescado + chaufa de mariscos.", image: "./images/menu/duo-marino-chaufa.jpg", available: true },
-    { id: 32, name: "Ceviche de Pescado + Arroz con Mariscos", category: "combos", price: 35, description: "Ceviche de pescado + arroz con mariscos.", image: "./images/menu/duo-marino-arroz.jpg", available: true },
-    { id: 33, name: "Chicharrón de Pescado + Arroz con Mariscos", category: "combos", price: 36, description: "Chicharrón de pescado + arroz con mariscos.", image: "./images/menu/chicharron-arroz.jpg", available: true },
-    { id: 34, name: "Ronda Marina", category: "combos", price: 70, description: "Ceviche de pescado + chicharrón de pescado + arroz con mariscos + chaufa de mariscos.", image: "./images/menu/ronda-marina.jpg", available: true },
-    { id: 35, name: "Trío Marino", category: "combos", price: 40, description: "Ceviche de pescado + chicharrón de pescado + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino.jpg", available: true },
-    { id: 36, name: "Trío Marino Mixto", category: "combos", price: 45, description: "Ceviche mixto + chicharrón mixto + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino-mixto.jpg", available: true },
+    // Trios marinos
+    { id: 35, name: "Trío Marino", category: "trios-marinos", price: 40, description: "Ceviche de pescado + chicharrón de pescado + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino.jpg", available: true },
+    { id: 36, name: "Trío Marino Mixto", category: "trios-marinos", price: 45, description: "Ceviche mixto + chicharrón mixto + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino-mixto.jpg", available: true },
+
+    // Ronda marina
+    { id: 34, name: "Ronda Marina", category: "ronda-marina", price: 70, description: "Ceviche de pescado + chicharrón de pescado + arroz con mariscos + chaufa de mariscos.", image: "./images/menu/ronda-marina.jpg", available: true },
 
     // Causas
     { id: 37, name: "Causa Acevichada", category: "causas", price: 25, description: "Causa rellena con ceviche.", image: "./images/menu/causa-acevichada.jpg", available: true },
