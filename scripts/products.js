@@ -50,7 +50,7 @@ const products = [
     { id: 33, name: "Chicharrón de Pescado + Arroz con Mariscos", category: "duos-marinos", price: 36, description: "Chicharrón de pescado + arroz con mariscos.", image: "./images/menu/chicharron-arroz.jpg", available: true },
 
     // Trios marinos
-    { id: 35, name: "Trío Marino", category: "trios-marinos", price: 40, description: "Ceviche de pescado + chicharrón de pescado + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino.jpg", available: true },
+    { id: 35, name: "Trío Marino", category: "trios-marinos", price: 40, description: "Ceviche de pescado + chicharrón de pescado + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino-pescado.jpg", available: true },
     { id: 36, name: "Trío Marino Mixto", category: "trios-marinos", price: 45, description: "Ceviche mixto + chicharrón mixto + arroz o chaufa de mariscos.", image: "./images/menu/trio-marino-mixto.jpg", available: true },
 
     // Ronda marina
@@ -79,7 +79,7 @@ const products = [
     { id: 53, name: "Agua Mineral 500 ml", category: "bebidas", price: 3, description: "Agua mineral 500 ml.", image: "./images/menu/agua.jpg", available: true },
     
     // Económico
-    { id: 60, name: "Combo Chaufa", category: "economico", price: 20, description: "Trío: leche de tigre + chaufa de mariscos + chicharrón de pota.", image: "./images/menu/leche-tigre-chaufa-pota.jpg", available: true },
+    { id: 60, name: "Combo Chaufa", category: "economico", price: 20, description: "Trío: leche de tigre + chaufa de mariscos + chicharrón de pota.", image: "./images/menu/combo-chaufa.jpg", available: true },
     { id: 61, name: "Combo Arroz con Mariscos", category: "economico", price: 20, description: "Trío: leche de tigre + arroz con mariscos + chicharrón de pota.", image: "./images/menu/leche-tigre-arroz-pota.jpg", available: true },
     { id: 62, name: "Combo Causa", category: "economico", price: 20, description: "Trío: leche de tigre + causa rellena + chicharrón de pota.", image: "./images/menu/leche-tigre-causa-pota.jpg", available: true },
     { id: 63, name: "Ceviche de Pescado + Chicharrón de Pota", category: "economico", price: 15, description: "Ceviche de pescado acompañado de chicharrón de pota.", image: "./images/menu/ceviche-pescado-pota.jpg", available: true },
