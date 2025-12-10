@@ -36,7 +36,7 @@ const products = [
     { id: 21, name: "Cabrilla en Salsa a lo Macho", category: "pescados-plancha-fritos", price: 39, description: "Cabrilla con salsa a lo macho.", image: "./images/menu/cabrilla-macho.jpg", available: true },
     { id: 22, name: "Milanesa de Pescado", category: "pescados-plancha-fritos", price: 30, description: "Milanesa de pescado.", image: "./images/menu/milanesa-pescado.jpg", available: true },
     { id: 23, name: "Trucha Dorada", category: "pescados-plancha-fritos", price: 25, description: "Trucha dorada frita.", image: "./images/menu/trucha-dorada.jpg", available: true },
-    { id: 24, name: "Trucha a la Parrilla", category: "pescados-plancha-fritos", price: 25, description: "Trucha a la parrilla.", image: "./images/menu/trucha-parrilla.jpg", available: true },
+    { id: 24, name: "Trucha a la Parrilla", category: "pescados-plancha-fritos", price: 25, description: "Trucha a la parrilla.", image: "./images/menu/trucha-parrillera.jpg", available: true },
     { id: 25, name: "Chita al Ajo", category: "pescados-plancha-fritos", price: 60, description: "Chita al ajo especial.", image: "./images/menu/chita-ajo.jpg", available: true },
 
     // Pastas
