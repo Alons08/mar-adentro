@@ -423,7 +423,7 @@ function submitOrder() {
     }
 
     // Construir mensaje para WhatsApp
-    let message = `¡Hola Los Gemelos! Quiero realizar el siguiente pedido:\n\n`;
+    let message = `¡Hola Mar Adentro! Quiero realizar el siguiente pedido:\n\n`;
     message += `*DATOS DEL CLIENTE*\n`;
     message += `🙍‍♂️ *Nombre:* ${customerName}\n`;
     message += `📞 *Teléfono:* ${customerPhone}\n`;
