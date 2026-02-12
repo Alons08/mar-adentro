@@ -1173,9 +1173,31 @@ body {
 .form-actions {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     padding: 15px;
     border-top: 1px solid var(--light-gray);
     background-color: var(--white);
+    flex-wrap: wrap;
+}
+
+.form-actions .btn {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.form-actions .btn-outline {
+    flex: 0 0 auto;
+    min-width: 120px;
+}
+
+.form-actions .btn-primary {
+    flex: 1 1 auto;
+}
+
+#submit-order .fa-whatsapp {
+    font-size: 1.1em;
+    color: #fff;
 }
 
 /* Floating Cart Button (MANTENIDO) */
